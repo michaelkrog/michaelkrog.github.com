@@ -1,0 +1,89 @@
+{
+  "basics": {
+    "name": "Michael Krog",
+    "label": "Software Developer",
+    "picture": "",
+    "email": "mic@apaq.dk",
+    "phone": "+45 51923192",
+    "website": "",
+    "summary": "Michael Krog kommer fra Aalborg, Danmark. Han har en stærk baggrund indenfor både hardware- og softwareudvikling. Efter endt uddannelse som Datamekaniker har han i løbet af de sidste 15 år hovedsageligt arbejdet med softwareudvikling i den finansielle branche. Hans arbejde har været fokuseret på webudvikling(Browser, mobil og server) og høj kodekvalitet.",
+    "location": {
+      "address": "Bornholmsgade 57",
+      "postalCode": "9000",
+      "city": "Aalborg",
+      "countryCode": "DK",
+      "region": "Nordjylland"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "michaelkrog",
+        "url": "https://twitter.com/michaelkrog"
+      },
+      {
+        "network": "Google Plus",
+        "username": "MichaelKrog",
+        "url": "https://google.com/+MichaelKrog"
+      },
+      {
+        "network": "Github",
+        "username": "michaelkrog",
+        "url": "https://github.com/michaelkrog"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Audio Media",
+      "position": "Software Developer",
+      "website": "http://audiomedia.dk",
+      "startDate": "2000-05-01",
+      "endDate": "2004-12-01",
+      "summary": "Audio Media er et forlag for producerer IT-magasiner som Datatid, Alt om DATA m.fl. ",
+      "highlights": []
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "CoderDojo",
+      "position": "Teacher",
+      "website": "http://coderdojo.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Global movement of free coding clubs for young people.",
+      "highlights": [
+        "Awarded 'Teacher of the Month'"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Metaindustriens Fagskole",
+      "area": "Datamekaniker",
+      "studyType": "",
+      "startDate": "1996-01-01",
+      "endDate": "2000-01-01",
+      "gpa": "",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "publications": [],
+  "skills": [],
+  "languages": [
+    {
+      "language": "Dansk",
+      "fluency": "Flydende"
+    },
+    {
+      "language": "Engelsk",
+      "fluency": "Flydende"
+    },
+    {
+      "language": "Tysk",
+      "fluency": "Til husbehov"
+    }
+  ],
+  "interests": [],
+  "references": []
+}
