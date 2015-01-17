@@ -84,7 +84,83 @@
   ],
   "awards": [],
   "publications": [],
-  "skills": [],
+  "skills": [
+    {
+      "name": "Server Software Development",
+      "level": "Meget erfaren",
+      "keywords": [
+        "Java",
+        "Spring",
+        "JPA",
+        "REST",
+        "Maven",
+        "JUnit",
+        "MySQL",
+        "PostgreSQL",
+        "Oracle",
+        "IBM DB2"
+      ]
+    },
+    {
+      "name": "Client Software Development",
+      "level": "Meget erfaren",
+      "keywords": [
+        "Javascript",
+        "Angular",
+        "Bower",
+        "Grunt"
+      ]
+    },
+    {
+      "name": "Versionsstyring",
+      "level": "Meget erfaren",
+      "keywords": [
+        "Git",
+        "Subversion"
+      ]
+    },
+    {
+      "name": "Design",
+      "level": "Nogen erfaring",
+      "keywords": [
+        "Brugervenlighed",
+        "Prototyping",
+        "Gimp",
+        "Photoshop",
+        "Inkscape"
+      ]
+    },
+    {
+      "name": "Native Apps",
+      "level": "Lidt erfaring",
+      "keywords": [
+        "iOS",
+        "Android"
+      ]
+    },
+    {
+      "name": "Hybrid App Development",
+      "level": "Meget erfaring",
+      "keywords": [
+        "Ionic",
+        "Angular",
+        "Grunt",
+        "Bower",
+        "iOS",
+        "Android"
+      ]
+    },
+    {
+      "name": "Embedded Development",
+      "level": "List erfaring",
+      "keywords": [
+        "C/C++",
+        "Spark Core",
+        "Arduino",
+        "Raspberry Pi"
+      ]
+    }
+  ],
   "languages": [
     {
       "language": "Dansk",
