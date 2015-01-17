@@ -34,28 +34,43 @@
   },
   "work": [
     {
+      "company": "Apaq",
+      "position": "Software Developer",
+      "website": "http://apaq.dk",
+      "startDate": "2014-10-01",
+      "endDate": "",
+      "summary": "Apaq er en konsulentvirksomhed der specialiserer sig i at lave elegant og enkle løsninger der løser kundernes behov. De har høj fokus på brugervenlighed og kvalitet",
+      "highlights": []
+    },
+    {
+      "company": "Nykredit",
+      "position": "Software Developer",
+      "website": "http://nykredit.dk",
+      "startDate": "2010-05-01",
+      "endDate": "2014-10-01",
+      "summary": "Nykredit er en af Danmarks førende finanskoncerner med bank og realkredit som de to bærende elementer. Derudover har Nykredit aktiviteter inden for forsikring, leasing, pension og ejendomsmæglervirksomhed",
+      "highlights": []
+    },
+    {
+      "company": "Conscius",
+      "position": "Software Developer",
+      "website": "http://conscius.dk",
+      "startDate": "2005-05-01",
+      "endDate": "2009-06-01",
+      "summary": "Conscius leverer softwareprodukter til finans- og energi-branchen. De udvikler produkter i tæt samarbejde med deres kunder, og sætter en ære i at forstå deres kunders forretning og forretningens udfordringer og potentiale.",
+      "highlights": []
+    },
+    {
       "company": "Audio Media",
       "position": "Software Developer",
       "website": "http://audiomedia.dk",
       "startDate": "2000-05-01",
       "endDate": "2004-12-01",
-      "summary": "Audio Media er et forlag for producerer IT-magasiner som Datatid, Alt om DATA m.fl. ",
+      "summary": "Audio Media er et af Danmarks ældste specialbladsforlag. De koncentrerer sig om det de er bedst til - nemlig at formidle information inden for teknologi og livsstilsprodukter på en let forståelig måde til mange hundrede tusinde læsere hver måned.",
       "highlights": []
     }
   ],
-  "volunteer": [
-    {
-      "organization": "CoderDojo",
-      "position": "Teacher",
-      "website": "http://coderdojo.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Global movement of free coding clubs for young people.",
-      "highlights": [
-        "Awarded 'Teacher of the Month'"
-      ]
-    }
-  ],
+  "volunteer": [],
   "education": [
     {
       "institution": "Metaindustriens Fagskole",
