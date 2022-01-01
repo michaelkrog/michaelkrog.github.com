@@ -13,14 +13,17 @@ class Hero extends React.Component {
 
   sentences = [
     'develop simplicity at scale',
-    'implement reusable API´s',
+    'design well-structured REST APIs',
+    'write clean and testable code',
+    'empathize with the end-users',
+    'prioritize mental health',
     'design rock solid user interfaces'
   ];
   sentenceIndex = 0;
   sentenceTimer?: any;
   sentenceElement?: HTMLSpanElement;
 
-  async typeSentence(sentence: string, eleRef: HTMLElement, delay = 100) {
+  async typeSentence(sentence: string, eleRef: HTMLElement, delay = 80) {
     const letters = sentence.split('');
     let i = 0;
     console.log(eleRef.textContent);
@@ -55,16 +58,19 @@ class Hero extends React.Component {
       }
   }
 
-  componentDidMount() {
-    this.sentenceTimer = setInterval(async () => {
-      this.showNextSentence();
-    }, 8000);
+  async loop() {
+    await this.showNextSentence();
 
-    setTimeout(() => this.showNextSentence(), 500);
+    clearTimeout(this.sentenceTimer);
+    this.sentenceTimer = setTimeout(async () => this.loop(), 6000);
+  }
+
+  componentDidMount() {
+    this.loop();
   }
 
   componentWillUnmount() {
-    clearInterval(this.sentenceTimer);
+    clearTimeout(this.sentenceTimer);
   }
 
   render() {
