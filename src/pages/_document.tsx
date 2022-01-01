@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import Script from 'next/script';
 
 import { AppConfig } from '../utils/AppConfig';
 
