@@ -1,3 +1,4 @@
+import { randomInt } from 'crypto';
 import Link from 'next/link';
 import React from 'react';
 
@@ -19,7 +20,7 @@ class Hero extends React.Component {
     { text: 'design well-structured REST APIs', tags: ['#designthinking', '#simplicity', '#softwarearchitecture'] },
     { text: 'write clean and testable code', tags: ['#simplicity', '#softwarearchitecture'] },
     { text: 'empathize with the end-users', tags: ['#designthinking'] },
-    { text: 'prioritize mental health', tags: ['#mentalhealth'] },
+    { text: 'prioritize mental health', tags: ['#mentalhealth', '#simplicity'] },
     { text: 'design rock solid user interfaces', tags: ['#designthinking', '#softwarearchitecture'] }
   ];
   sentenceIndex = 0;
@@ -27,12 +28,12 @@ class Hero extends React.Component {
   sentenceElement?: HTMLSpanElement;
   tagElement?: HTMLElement;
 
-  async typeSentence(sentence: string, eleRef: HTMLElement, delay = 80) {
+  async typeSentence(sentence: string, eleRef: HTMLElement, delay = 60) {
+    console.log('Typing sentence');
     const letters = sentence.split('');
     let i = 0;
-    console.log(eleRef.textContent);
     while (i < letters.length) {
-      await this.waitForMs(delay);
+      await this.waitForMs(delay + Math.floor(Math.random() * 50));
       eleRef.textContent = eleRef.textContent == null ? letters[i]! : eleRef.textContent! + letters[i];
       i++
     }
@@ -40,14 +41,20 @@ class Hero extends React.Component {
   }
 
   async addTags(tags: string[], eleRef: HTMLElement) {
+    console.log('Adding tags');
+    eleRef.setAttribute('pause', 'true');
+    
     const wrapper = document.createElement('div');
     tags.forEach(t => {
       const tagEl = document.createElement('sl-badge');
       tagEl.textContent = t;
-      tagEl.setAttribute('type', 'info');
+      tagEl.setAttribute('type', 'default');
+      //tagEl.classList.add('mx-1')
       wrapper.appendChild(tagEl);
     });
     eleRef.appendChild(wrapper);
+    await this.waitForMs(300);
+    console.log('Fading in tags');
     eleRef.setAttribute('pause', 'false');
     return;
   }
@@ -72,6 +79,24 @@ class Hero extends React.Component {
     return new Promise(resolve => setTimeout(resolve, ms))
   }
 
+  shuffle(array: SentenceEntry[]) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle...
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex]!, array[currentIndex]!];
+    }
+  
+    return array;
+  }
+
   async showNextSentence() {
     this.deleteTags(this.tagElement!);
     await this.deleteSentence(this.sentenceElement!);
@@ -93,6 +118,7 @@ class Hero extends React.Component {
   }
 
   componentDidMount() {
+    this.shuffle(this.sentences);
     this.loop();
   }
 
@@ -174,7 +200,8 @@ class Hero extends React.Component {
         }
 
         .hero__tags {
-          height: 30px;
+          height: 2rem;
+          margin-top: -0.7rem;
         }
       `}
         </style>
