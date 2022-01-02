@@ -1,6 +1,8 @@
 declare namespace JSX {
     interface IntrinsicElements {
-      "sl-button": any;
+      "sl-animation": any;
       "sl-avatar": any;
+      "sl-badge": any;
+      "sl-button": any;
     }
   }
