@@ -8,8 +8,13 @@ const VerticalFeatures = () => (
   >
     <VerticalFeatureRow
       title="Simplicity"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
-      image="/assets/images/feature.svg"
+      description={
+        <>
+          <i>"Genius is making complex ideas simple, not making simples ideas complex"</i>
+          <span> - Albert Einstein</span>
+        </>
+      }
+      image="/assets/images/simplicity.svg"
       imageAlt="First feature alt text"
     />
     <VerticalFeatureRow
@@ -22,7 +27,7 @@ const VerticalFeatures = () => (
     <VerticalFeatureRow
       title="Design Thinking"
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
-      image="/assets/images/feature3.svg"
+      image="/assets/images/designthinking.svg"
       imageAlt="Third feature alt text"
     />
     <VerticalFeatureRow

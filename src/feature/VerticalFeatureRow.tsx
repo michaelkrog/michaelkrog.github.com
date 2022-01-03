@@ -1,9 +1,10 @@
 import className from 'classnames';
 import { useRouter } from 'next/router';
+import { ReactNode } from 'react';
 
 type IVerticalFeatureRowProps = {
-  title: string;
-  description: string;
+  title: string | ReactNode;
+  description: string | ReactNode;
   image: string;
   imageAlt: string;
   reverse?: boolean;

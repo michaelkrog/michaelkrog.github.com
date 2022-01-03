@@ -151,14 +151,14 @@ class Hero extends React.Component {
                 {'Hi there '}
                 <sl-animation name="tada" duration="60000"><div style={{'display':'inline-block'}}>👋</div></sl-animation>
                 {' \n'}
-                <span className="text-primary-500">I'm Michael Krog!</span>
+                <span className="text-blue-500">I'm Michael Krog!</span>
               </>
             }
             description={
               <>
                 <div className="inline-flex justify-items-center items-center">
                   <span>What I do is </span>
-                  <span ref={el => this.sentenceElement = el!} className="text-primary-700 ml-1" id="sentence"></span>
+                  <span ref={el => this.sentenceElement = el!} className="text-blue-700 ml-1" id="sentence"></span>
                   <span className="input-cursor"></span>
                 </div>
                 <div className="hero__tags">
