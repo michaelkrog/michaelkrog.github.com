@@ -4,5 +4,6 @@ declare namespace JSX {
       "sl-avatar": any;
       "sl-badge": any;
       "sl-button": any;
+      "sl-icon": any;
     }
   }

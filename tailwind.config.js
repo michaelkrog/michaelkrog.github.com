@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -16,6 +18,9 @@ module.exports = {
     extend: {
       colors: {
 
+      },
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans]
       },
       lineHeight: {
         hero: '4.5rem',

@@ -1,18 +1,21 @@
-import { Meta } from '../layout/Meta';
+import { Meta } from '../components/Meta';
 import { AppConfig } from '../utils/AppConfig';
-import { Banner } from './Banner';
-import { Footer } from './Footer';
-import { Hero } from './Hero';
-import { VerticalFeatures } from './VerticalFeatures';
+import { Footer } from '../components/Footer';
+import { ReactNode } from 'react';
+import { Header } from '../components/header';
 
-const Base = () => (
+type IBaseTemplateProps = {
+  children: ReactNode;
+  hero?: ReactNode;
+};
+
+const BaseTemplate = (props: IBaseTemplateProps) => (
   <div className="antialiased text-gray-600">
     <Meta title={AppConfig.title} description={AppConfig.description} />
-    <Hero />
-    <VerticalFeatures />
-    <Banner />
+    <Header>{props.hero}</Header>
+    {props.children}
     <Footer />
   </div>
 );
 
-export { Base };
+export { BaseTemplate as Base };

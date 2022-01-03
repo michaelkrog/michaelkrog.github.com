@@ -1,12 +1,9 @@
-import { randomInt } from 'crypto';
 import Link from 'next/link';
 import React from 'react';
+import { shuffle } from '../utils/shuffle';
 
-import { Background } from '../background/Background';
-import { HeroOneButton } from '../hero/HeroOneButton';
-import { Section } from '../layout/Section';
-import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
-import { Logo } from './Logo';
+import { HeroOneButton } from './HeroOneButton';
+import { Section } from './Section';
 
 interface SentenceEntry {
   text: string;
@@ -79,25 +76,10 @@ class Hero extends React.Component {
     return new Promise(resolve => setTimeout(resolve, ms))
   }
 
-  shuffle(array: SentenceEntry[]) {
-    let currentIndex = array.length,  randomIndex;
-  
-    // While there remain elements to shuffle...
-    while (currentIndex != 0) {
-  
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-  
-      // And swap it with the current element.
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex]!, array[currentIndex]!];
-    }
-  
-    return array;
-  }
+
 
   async showNextSentence() {
+    if(this.tagElement == null || this.sentenceElement == null) return;
     this.deleteTags(this.tagElement!);
     await this.deleteSentence(this.sentenceElement!);
     await this.waitForMs(500);
@@ -118,7 +100,7 @@ class Hero extends React.Component {
   }
 
   componentDidMount() {
-    this.shuffle(this.sentences);
+    shuffle(this.sentences);
     this.loop();
   }
 
@@ -128,22 +110,6 @@ class Hero extends React.Component {
 
   render() {
     return (
-      <Background color="bg-gray-100">
-        <Section yPadding="py-6">
-          <NavbarTwoColumns logo={<Logo xl />}>
-            <li>
-              <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
-                <a>GitHub</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a>Sign in</a>
-              </Link>
-            </li>
-          </NavbarTwoColumns>
-        </Section>
-
         <Section yPadding="pt-20 pb-32">
           <HeroOneButton
             title={
@@ -175,8 +141,7 @@ class Hero extends React.Component {
               </Link>
             }
           />
-        </Section>
-        <style jsx>
+          <style jsx>
           {`
         @keyframes blink {
           0% {opacity: 1;}
@@ -205,7 +170,8 @@ class Hero extends React.Component {
         }
       `}
         </style>
-      </Background>
+        </Section>
+        
     )
   }
 }
