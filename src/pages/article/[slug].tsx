@@ -4,14 +4,14 @@ import matter from "gray-matter";
 import styles from '../../styles/article.module.css';
 import { ArticleInfo } from "../../types/article";
 import Markdown from "../../components/markdown";
-
+import { Base } from '../../templates/Base';
 
 interface IProps {
     article: ArticleInfo;
 }
 
 const Article: FunctionComponent<IProps> = ({ article }) => {
-    return <div className={styles.article}>
+    return <Base><div className={styles.article}>
         <div className={styles.thumbnail}>
             <img src={article.meta.thumbnail} />
 
@@ -24,6 +24,7 @@ const Article: FunctionComponent<IProps> = ({ article }) => {
             <Markdown content={article.content} />
         </div>
     </div>
+    </Base>
 }
 
 export async function getStaticProps({ ...ctx }) {
