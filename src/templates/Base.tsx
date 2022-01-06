@@ -1,8 +1,8 @@
 import { Meta } from '../components/Meta';
 import { AppConfig } from '../utils/AppConfig';
-import { Footer } from '../components/Footer';
+import { Footer } from '../components/footer/Footer';
 import { ReactNode } from 'react';
-import { Header } from '../components/header';
+import { Header } from '../components/header/Header';
 
 type IBaseTemplateProps = {
   children: ReactNode;

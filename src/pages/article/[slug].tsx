@@ -3,7 +3,7 @@ import fs from 'fs';
 import matter from "gray-matter";
 import styles from '../../styles/article.module.css';
 import { ArticleInfo } from "../../types/article";
-import Markdown from "../../components/markdown";
+import Markdown from "../../components/Markdown";
 import { Base } from '../../templates/Base';
 
 interface IProps {

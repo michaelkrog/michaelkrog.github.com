@@ -1,5 +1,5 @@
 import styles from '../styles/blog.module.css'
-import Card from '../components/card'
+import Card from '../components/Card'
 import fs from 'fs'
 import matter from 'gray-matter'
 import { ArticleMeta } from '../types/article'
