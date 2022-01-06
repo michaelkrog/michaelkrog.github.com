@@ -134,7 +134,7 @@ class Hero extends React.Component {
               </>
             }
             button={
-              <Link href="https://creativedesignsguru.com/category/nextjs/">
+              <Link href="/blog">
                 <a>
                   <sl-button size="large" type="primary">Let me tell you how</sl-button>
                 </a>
