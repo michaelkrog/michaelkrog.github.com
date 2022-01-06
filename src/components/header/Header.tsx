@@ -14,7 +14,7 @@ const Header = (props: IHeaderProps) => (
         <Section yPadding="py-4">
           <NavbarTwoColumns logo={<Logo xl />}>
           <li>
-              <Link href="/me">
+              <Link href="/who-i-am">
                 <a>Me</a>
               </Link>
             </li>

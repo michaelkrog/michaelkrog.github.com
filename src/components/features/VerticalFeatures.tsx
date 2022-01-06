@@ -1,7 +1,6 @@
 import { VerticalFeatureRow } from './VerticalFeatureRow';
 import { Section } from '../layout/Section';
 import React from 'react';
-import { shuffle } from '../../utils/shuffle';
 
 
 class VerticalFeatures extends React.Component {

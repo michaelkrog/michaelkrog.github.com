@@ -28,6 +28,7 @@ export async function getStaticProps() {
     const files = fs.readdirSync("articles");
     
     let articles = files.map(file => {
+        
         const data = fs
             .readFileSync(`articles/${file}`)
             .toString();
