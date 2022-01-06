@@ -3,8 +3,8 @@ import fs from 'fs';
 import matter from "gray-matter";
 import styles from '../../styles/article.module.css';
 import { ArticleInfo } from "../../types/article";
-import Markdown from "../../components/Markdown";
 import { Base } from '../../templates/Base';
+import Markdown from "../../components/Markdown";
 
 interface IProps {
     article: ArticleInfo;
