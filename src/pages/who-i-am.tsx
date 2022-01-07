@@ -46,28 +46,14 @@ class WhoIAm extends React.Component {
                             Come to think of it - I think we enjoy fun. And food. Both fun and food is important.
                         </p>
                         <p className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
-                            I know <strong>having fun is important</strong> especially after I experienced severe stress and anxiety. Now, I don't recognize stress and anxiety as particalur dangerous - in fact it can be a favorable feeling - but it many cases it can also become extremely unpleasant when our reaction is based on fear.
+                            I know <strong>having fun is important</strong> especially after I experienced severe stress and anxiety when I was younger. Now, I don't recognize stress and anxiety as particalur dangerous - in fact it can be a favorable feeling - but it many cases it can also become extremely unpleasant when our reaction is based on fear.
                             It is why I emphasize the need to take care of our mental health and write about it in <a href="/blog">my blog</a>. I want to help people cope better in a world that can be quite stressfull. Lowering our stress level gives us <strong>more joy</strong> and makes us more productive.
                         </p>
                     </div>
-
-
-
-
                 </Section>
             </Base>
         );
     }
 }
 
-/**
- * 
- * <h3 className="text-3xl text-gray-900 border-b mt-8">What I do</h3>                    <p className="text-gray-500 mb-2">
-                        -
-                    </p>
-                    <h3 className="text-3xl text-gray-900 border-b mt-8">What I did</h3>
-                    <p className="text-gray-500 mb-2">
-                        -
-                    </p>
- */
 export default WhoIAm;
