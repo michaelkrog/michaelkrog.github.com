@@ -21,6 +21,7 @@
     "next-seo": "^4.28.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-intersection-observer": "^8.33.1",
     "react-markdown": "^7.1.2",
     "react-syntax-highlighter": "^15.4.5"
   },
@@ -50,8 +51,8 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
-    "rimraf": "^3.0.2",
     "react-syntax-highlighter": "^15.4.5",
+    "rimraf": "^3.0.2",
     "tailwindcss": "^3.0.8",
     "typescript": "^4.5.4"
   },

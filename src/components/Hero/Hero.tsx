@@ -4,6 +4,7 @@ import { shuffle } from '../../utils/shuffle';
 
 import { HeroOneButton } from './HeroOneButton';
 import { Section } from '../layout/Section';
+import { InView } from 'react-intersection-observer';
 
 interface SentenceEntry {
   text: string;
@@ -24,7 +25,8 @@ class Hero extends React.Component {
   sentenceTimer?: any;
   sentenceElement?: HTMLSpanElement;
   tagElement?: HTMLElement;
-
+  inView: boolean = true;
+  
   async typeSentence(sentence: string, eleRef: HTMLElement, delay = 60) {
     console.log('Typing sentence');
     const letters = sentence.split('');
@@ -79,6 +81,7 @@ class Hero extends React.Component {
 
 
   async showNextSentence() {
+    console.log('Showing next');
     if(this.tagElement == null || this.sentenceElement == null) return;
     this.deleteTags(this.tagElement!);
     await this.deleteSentence(this.sentenceElement!);
@@ -93,7 +96,9 @@ class Hero extends React.Component {
   }
 
   async loop() {
-    await this.showNextSentence();
+    if(this.inView) {
+      await this.showNextSentence();
+    }
 
     clearTimeout(this.sentenceTimer);
     this.sentenceTimer = setTimeout(async () => this.loop(), 4500);
@@ -122,15 +127,18 @@ class Hero extends React.Component {
             }
             description={
               <>
-                <div className="inline-flex justify-items-center items-center">
+              <InView as="div" onChange={(inView, _) => this.inView = inView}>
+
+                <div className="items-center" >
                   <span>What I do is </span>
-                  <span ref={el => this.sentenceElement = el!} className="text-blue-700 ml-1" id="sentence"></span>
-                  <span className="input-cursor"></span>
+                  <span ref={el => this.sentenceElement = el!} className="text-blue-700" id="sentence"></span>
+                  <span className="input-cursor -mb-1"></span>
                 </div>
                 <div className="hero__tags">
                   <sl-animation name="fadeIn" ref={(el: HTMLElement) => this.tagElement = el} pause="true" iterations="1" duration="300" easing="easeOut">
                   </sl-animation>
                 </div>
+                </InView>
               </>
             }
             button={
