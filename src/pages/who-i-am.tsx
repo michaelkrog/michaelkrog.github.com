@@ -37,17 +37,30 @@ class WhoIAm extends React.Component {
                     </div>
                     <div className="text-medium">
                         <p className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
-                            Software development has been a <strong>major interest</strong> for me since I was a kid. I love the challenge of making
-                            something complex very easy to use. That is also why I have worked with both frontend, backend, API and
-                            UX design - I want to be able to track users needs all the way to the core.
+                            Software development and design has been a <strong>major interest</strong> for me since I 
+                            was a kid. I love the challenge of making something complex very easy to use. That is also 
+                            why I have worked with both frontend, backend, API and UX design - I like to be able to 
+                            track the implementation of a prototype design all the way to the core.
                         </p>
                         <p className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
-                            In 2003 I married Hannah, the <strong>love of my life</strong>. Together we live in <a href="https://maps.apple.com/?address=Sjælland, Danmark&ll=55.545598,11.697374&q=Sjælland&_ext=EiYpsJNVbCd7S0AxObMC6Jy8JUA5DUQFPYoQTEBBw9CPK5pHKUBQDA==">Denmark</a> where we have a house and a cat - we named it Thorkild. We have a lot of fun.
+                            In 2003 I married Hannah, the <strong>love of my life</strong>. Together we live 
+                            in <a href="https://maps.apple.com/?address=Sjælland, Danmark&ll=55.545598,11.697374&q=Sjælland&_ext=EiYpsJNVbCd7S0AxObMC6Jy8JUA5DUQFPYoQTEBBw9CPK5pHKUBQDA==">Denmark</a> where we have a house and a cat - we named it Thorkild. We have a lot of fun.
                             Come to think of it - I think we enjoy fun. And food. Both fun and food is important.
                         </p>
                         <p className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
-                            I know <strong>having fun is important</strong> especially after I experienced severe stress and anxiety when I was younger. Now, I don't recognize stress and anxiety as particalur dangerous - in fact it can be a favorable feeling - but it many cases it can also become extremely unpleasant when our reaction is based on fear.
-                            It is why I emphasize the need to take care of our mental health and write about it in <a href="/blog">my blog</a>. I want to help people cope better in a world that can be quite stressfull. Lowering our stress level gives us <strong>more joy</strong> and makes us more productive.
+                            I know <strong>having fun is important</strong> especially after I experienced severe 
+                            stress and anxiety when I was younger. Now, I don't recognize stress and anxiety as 
+                            particalur dangerous - in fact it can be a favorable feeling - but it many cases it can 
+                            also become extremely unpleasant when our reaction is based on fear.
+                            It is why I emphasize the need to take care of our mental health and write about it 
+                            in <a href="/blog">my blog</a>. I want to help people cope better in a world that can be 
+                            quite stressfull. Lowering our stress level gives us <strong>more joy</strong> and 
+                            makes us more productive.
+                        </p>
+                        <p className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
+                            Being joyful and showing love to others tends to energize people around us. Each day 
+                            I spend time meditating on how <strong>I improve my personal qualities</strong> in an effort
+                            to improve my relations and pass a bit of the goodness I have received on to others.
                         </p>
                     </div>
                 </Section>
