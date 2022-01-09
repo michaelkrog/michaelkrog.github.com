@@ -13,7 +13,7 @@ class WhatIDo extends React.Component {
                     <Tabs index={1}></Tabs>
                     <div className="text-medium">
                         <p className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
-                            This is what I do!
+                            This page will soon describe what I currently accomplish professionally
                         </p>
 
                     </div>
