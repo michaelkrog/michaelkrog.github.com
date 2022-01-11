@@ -17,10 +17,6 @@ class WhatIDo extends React.Component {
                         </p>
 
                     </div>
-
-
-
-
                 </Section>
             </Base>
         );

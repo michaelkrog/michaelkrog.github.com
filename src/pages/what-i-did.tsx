@@ -17,10 +17,6 @@ class WhatIDid extends React.Component {
                         </p>
 
                     </div>
-
-
-
-
                 </Section>
             </Base>
         );
