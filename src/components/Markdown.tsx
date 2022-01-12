@@ -23,7 +23,7 @@ const Markdown: FunctionComponent<IProps> = ({content}) => {
     }
 
     return <div className="markdown-body">
-        <ReactMarkdown components={components} children={content} />
+        <ReactMarkdown className="prose prose-indigo prose-lg text-gray-500 mx-auto" components={components} children={content} />
     </div>
 }
 
