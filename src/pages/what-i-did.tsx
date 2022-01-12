@@ -13,6 +13,7 @@ const activity = [
       'https://www.audio.dk/wp-content/uploads/2017/02/audio-logo-512.png',
     company: { name: 'Audio Media', href: 'http://audio.dk' },
     date: 'January 2000',
+    comment: ''
   },
   {
     id: '1_2',
@@ -143,7 +144,7 @@ class WhatIDid extends React.Component {
                               <p className="mt-0.5 text-sm text-gray-500">Commented {activityItem.date}</p>
                             </div>
                             <div className="mt-2 text-sm text-gray-700">
-                              <p>activityItem.comment</p>
+                              <p>{activityItem.comment}</p>
                             </div>
                           </div>
                         </>
