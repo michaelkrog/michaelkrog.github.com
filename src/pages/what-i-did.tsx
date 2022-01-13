@@ -49,6 +49,12 @@ const activity = [
     tags: ['Java', 'Lucene', 'Spring']
   },
   {
+    id: '2_4',
+    type: 'assignment',
+    description: 'Developed audio player and recorder.',
+    tags: ['Python', 'GStreamer']
+  },
+  {
     id: '3_1',
     type: 'hire',
     title: 'Software Architect',

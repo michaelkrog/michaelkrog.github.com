@@ -16,7 +16,7 @@ class VerticalFeatures extends React.Component {
       title="Simplicity"
       description={
         <>
-          <div>Too often software projects are highly overengineered. Keeping thing simple saves time and money.</div>
+          <div>Too often software projects are highly overengineered. Keeping things simple saves time and money.</div>
           <Link href="/blog"><sl-button size="small" class="mt-2" type="primary">Tell me more</sl-button></Link>
         </>
       }

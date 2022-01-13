@@ -60,7 +60,7 @@ class WhoIAm extends React.Component {
                         </p>
                         <p className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
                             Being joyful and showing love to others tends to energize people around us. Each day 
-                            I spend time meditating on how <strong>I improve my personal qualities</strong> in an effort
+                            I spend time meditating on how <strong>I can improve my personal qualities</strong> in an effort
                             to improve my relations and pass a bit of the goodness I have received on to others.
                         </p>
                     </div>
