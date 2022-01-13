@@ -5,6 +5,7 @@ declare namespace JSX {
       "sl-badge": any;
       "sl-button": any;
       "sl-icon": any;
+      "sl-dialog": any;
       "sl-tooltip": any;
     }
   }

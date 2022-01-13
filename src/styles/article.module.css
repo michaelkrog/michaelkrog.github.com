@@ -27,7 +27,6 @@
 
 .thumbnail .title h1{
 	text-align: center;
-	width: 70%;
 	color: #fff;
 	font-size: 3em;
 }
@@ -47,7 +46,6 @@
 	margin-top: -100px;
 	padding: 50px;
 	border-radius: 10px;
-	width: 70%;
 	background-color: #fff;
 	box-shadow: 0 4px 8px 0 #0001, 0 6px 20px 0 #0001; 
 }

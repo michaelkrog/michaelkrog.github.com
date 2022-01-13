@@ -22,6 +22,12 @@ const activity = [
     tags: ['Java', 'Sql', 'Javascript', 'Html', 'CSS']
   },
   {
+    id: '1_3',
+    type: 'assignment',
+    description: 'Built automated integration with accounting system for online sales.',
+    tags: ['Java', 'C#']
+  },
+  {
     id: '2_1',
     type: 'hire',
     title: 'Senior Software Developer',
@@ -61,7 +67,7 @@ const activity = [
     id: '3_3',
     type: 'assignment',
     description: 'Continued development on internally developed CI server.',
-    tags: ['Java', 'Spring']
+    tags: ['Java', 'Spring', 'Sql', 'RabbitMQ']
   },
   {
     id: '4_1',
@@ -76,26 +82,29 @@ const activity = [
     id: '4_2',
     type: 'assignment',
     description: 'Created user friendly docker orchestration web interface.',
-    tags: ['Java', 'Spring', 'docker', 'swarm', 'kubernetes', 'mongodb', 'Html', 'CSS']
+    screenshot: '/assets/images/screenshots/meerkat.png',
+    tags: ['Java', 'Spring', 'docker swarm', 'kubernetes', 'mongodb', 'Angular', 'Typescript', 'Html', 'CSS']
   },
   {
     id: '4_3',
     type: 'assignment',
     description: 'Designed and implemented central Design System.',
     link: 'https://ds.xena.biz',
+    screenshot: '/assets/images/screenshots/xenads.png',
     tags: ['CSS', 'Webcomponents', 'StencilJs', 'Typescript']
   },
   {
     id: '4_4',
     type: 'assignment',
-    description: 'Continued development on accounting system backend for Xena.biz',
+    description: 'Continued development on accounting system backend for Xena.biz.',
     link: 'https://xena.biz',
+    screenshot: '/assets/images/screenshots/xena.png',
     tags: ['C#', 'SQL', 'RabbitMQ']
   },
   {
     id: '4_5',
     type: 'assignment',
-    description: 'Architected Angular-based Webcomponents for transforming deprecated accounting UI into a modern code base.',
+    description: 'Architected lazy loaded Angular-based Webcomponents for gradually transforming deprecated accounting UI into a modern code base.',
     tags: ['CSS', 'Webcomponents', 'Angular', 'StencilJs', 'Typescript']
   }
 ]
@@ -106,10 +115,20 @@ function classNames(...classes: string[]) {
 
 class WhatIDid extends React.Component {
 
+  modal?: HTMLElement;
+
+  showImage(link: string) {
+    while(this.modal!.hasChildNodes()) this.modal!.firstChild?.remove();
+    var image = document.createElement('img');
+    image.src = link;
+    this.modal?.appendChild(image);
+    this.modal?.setAttribute('open', 'true');
+  }
 
   render() {
     return (
       <Base>
+        <sl-dialog ref={(el: HTMLElement) => this.modal = el}></sl-dialog>
         <Section>
           <Tabs index={2}></Tabs>
           <div className="flow-root">
@@ -168,9 +187,6 @@ class WhatIDid extends React.Component {
                               </a>
                               </p>
                             </div>
-                            <div className="mt-2 text-sm text-gray-700">
-                              <p>activityItem.comment</p>
-                            </div>
                           </div>
                         </>
                       ) : activityItem.type === 'assignment' ? (
@@ -185,9 +201,11 @@ class WhatIDid extends React.Component {
                     <div className="min-w-0 flex-1 py-1.5">
                       <div className="text-sm text-gray-500">
                         {activityItem.description}
-                        {activityItem.link != null ? <a target="_blank" className="ml-1 text-blue-500" href={activityItem.link}><sl-icon name="box-arrow-up-right"></sl-icon></a> : null }
+                        {activityItem.screenshot ? <sl-tooltip content="View screenshot"><a target="_blank" className="ml-1 text-blue-500 align-middle text-base" onClick={_ => this.showImage(activityItem.screenshot)}><sl-icon name="image"></sl-icon></a></sl-tooltip> : null}
+                        {activityItem.link != null ? <sl-tooltip content="Go to product"><a target="_blank" className="ml-1 text-blue-500 align-middle text-base" href={activityItem.link}><sl-icon name="link-45deg"></sl-icon></a></sl-tooltip> : null }
                       </div>
-                      {activityItem.tags?.map(t => <sl-badge type="info" style={{'margin-right':'0.2rem'}}>{t}</sl-badge>)}
+                      {activityItem.tags?.map((t, index) => <sl-badge key={index} type="info" style={{'marginRight':'0.2rem'}}>{t}</sl-badge>)}
+                      
                     </div>
                   </>
                 ) : activityItem.type === 'tags' ? (

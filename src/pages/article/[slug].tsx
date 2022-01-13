@@ -58,7 +58,7 @@ export async function getStaticPaths() {
             slug: file.split('.')[0]
         }
     }))
-    
+
     return {
         paths,
         fallback: false,
