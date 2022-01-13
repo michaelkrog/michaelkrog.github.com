@@ -1,6 +1,7 @@
 import { VerticalFeatureRow } from './VerticalFeatureRow';
 import { Section } from '../layout/Section';
 import React from 'react';
+import Link from 'next/link';
 
 
 class VerticalFeatures extends React.Component {
@@ -16,7 +17,7 @@ class VerticalFeatures extends React.Component {
       description={
         <>
           <div>Too often software projects are highly overengineered. Keeping thing simple saves time and money.</div>
-          <sl-button size="small" class="mt-2" type="primary">Tell me more</sl-button>
+          <Link href="/blog"><sl-button size="small" class="mt-2" type="primary">Tell me more</sl-button></Link>
         </>
       }
       image="/assets/images/simplicity.svg"
@@ -27,7 +28,7 @@ class VerticalFeatures extends React.Component {
       description={
         <>
           <div>By designing software in a way that is clean and fairly simple to grok for all developers, ensures that it can be easily tested, used and expanded.</div>
-          <sl-button size="small" class="mt-2" type="primary">Tell me more</sl-button>
+          <Link href="/blog"><sl-button size="small" class="mt-2" type="primary">Tell me more</sl-button></Link>
         </>
       }
       image="/assets/images/softwarearchitecture.svg"
@@ -39,7 +40,7 @@ class VerticalFeatures extends React.Component {
       description={
         <>
           <div>Including users and decision-makers in a solid design process allows for crafting simple, innovative and precise prototypes. No need to develop features that will not be used.</div>
-          <sl-button size="small" class="mt-2" type="primary">Tell me more</sl-button>
+          <Link href="/blog"><sl-button size="small" class="mt-2" type="primary">Tell me more</sl-button></Link>
         </>
       }
       image="/assets/images/designthinking.svg"
@@ -50,7 +51,7 @@ class VerticalFeatures extends React.Component {
       description={
         <>
           <div>Being mindful of your focus in order to control your thoughts can free you from stress and anxiety. You can train your focus and gain a better well-being.</div>
-          <sl-button size="small" class="mt-2" type="primary">Tell me more</sl-button>
+          <Link href="/blog"><sl-button size="small" class="mt-2" type="primary">Tell me more</sl-button></Link>
         </>
       }
       image="/assets/images/mentalhealth.svg"

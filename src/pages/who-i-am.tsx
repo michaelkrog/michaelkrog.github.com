@@ -3,6 +3,7 @@ import { Section } from '../components/layout/Section';
 import { Base } from '../templates/Base';
 import { shuffle } from '../utils/shuffle';
 import Tabs from '../components/Tabs';
+import Link from 'next/link';
 
 class WhoIAm extends React.Component {
     imageClasses = 'rounded-full drop-shadow object-cover w-24 h-24 lg:w-27 lg:h-27';
@@ -53,7 +54,7 @@ class WhoIAm extends React.Component {
                             a favorable feeling - but it many cases it can 
                             also become unpleasant when our reaction is based on fear.
                             It is why I emphasize the need to take care of our mental health and write about it 
-                            in <a href="/blog">my blog</a>. I want to help people cope better in a world that can be 
+                            in <Link href="/blog">my blog</Link>. I want to help people cope better in a world that can be 
                             quite stressfull. Lowering our stress level gives us <strong>more joy</strong> and 
                             makes us more productive.
                         </p>

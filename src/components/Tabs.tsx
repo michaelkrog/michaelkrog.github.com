@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 
@@ -11,17 +12,17 @@ const activeClasses = 'border-indigo-500 text-indigo-600 whitespace-nowrap py-4 
 const Tabs = (props: ITabsProps) => (
     <div className="border-b border-gray-200">
         <nav className="-mb-px flex space-x-8" aria-label="Tabs">
-            <a href="/who-i-am" className={props.index === 0 ? activeClasses : inactiveClasses}>
-                Who I am
-            </a>
+            <Link href="/who-i-am">
+                <span className={props.index === 0 ? activeClasses : inactiveClasses}>Who I am</span>
+            </Link>
 
-            <a href="/what-i-do" className={props.index === 1 ? activeClasses : inactiveClasses}>
-                What I do
-            </a>
+            <Link href="/what-i-do">
+                <span className={props.index === 1 ? activeClasses : inactiveClasses}>What I do</span>
+            </Link>
 
-            <a href="/what-i-did" className={props.index === 2 ? activeClasses : inactiveClasses}>
-                What I did
-            </a>
+            <Link href="/what-i-did">
+                <span className={props.index === 2 ? activeClasses : inactiveClasses}>What I did</span>
+            </Link>
         </nav>
     </div>
 
