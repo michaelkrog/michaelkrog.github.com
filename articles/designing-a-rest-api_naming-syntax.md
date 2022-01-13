@@ -5,7 +5,7 @@ series: true
 tags:
     - softwarearchitecture
     - simplicity
-thumbnail: /assets/images/api.jpg
+thumbnail: /assets/images/blog/api.jpg
 ---
 
 ## Introduction
