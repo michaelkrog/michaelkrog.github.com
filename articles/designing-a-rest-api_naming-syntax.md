@@ -69,7 +69,7 @@ Another question that often arises is whether to use plural og singular naming f
 ### Why some prefer singular naming
 Some prefer the singular model here. They may argue that the Entity is a class called `Animal` in the backend which is singular. Therefore the resource should also use a singular naming of the resource, they say. The name of the resource thereby defines the type of data in the resource. That sounds like a legid reason - but in fact it is not.
 
-### Why plural naming is correct
+### Why plural naming is almost always correct
 According to [the definition of REST on Wikipedia](https://en.wikipedia.org/wiki/Representational_state_transfer), a resource "encapsulate entities (e.g. files)". So the name of the resource is not the data type. It is the name of the container of entities - which usually is of the same type. Imagine for a second how you would write a piece of code that defines a "container" of entities.
 
 ```Java
@@ -85,17 +85,18 @@ animal.add(new Animal());
 You can look at the resource the same way. It is a container of entities just like Arrays, Lists etc. and should be named as such. If will also ensure that the implementation in the client can reflect the resource names in its integration with the API. Consider this simplified integration as an example:
 
 ```Javascript
-class ApiClient {
+class MyShopClient {
     animals() {
         return ...;
     }
 }
 
-var client = new ApiClient();
-client.animals.findAll(); // Request to https://myshop.com/animals
+var myshop = new MyshopClient();
+myshop.animals.findAll(); // Request to https://myshop.com/animals
 ```
 
 Notice that the naming naturally reflects the naming of the resources on the server. Recognizable patterns like this makes it easy for developers to figure out navigate the API.
+
 
 ## Recognizability
 Ensuring that naming and patterns are easy to recognize should be considered a quality of the API implementation. For example using different name casing conventions or unnatural naming of resources makes it harder for the user of your API to figure out how to use it. But there are more you can do to ensure the quality of your API.
