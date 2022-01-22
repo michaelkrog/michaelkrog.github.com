@@ -39,7 +39,7 @@ The first we will cover is the use of casing when designing your REST API. As yo
 
 More than these exists, but these are the ones most common in REST APIs. For example you will see that [Stripe](https://stripe.com/docs/api) uses snake_case and Amazon uses multiple conventions fx. [PascalCase](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_BatchExecuteStatement.html) and [camelCase](https://docs.aws.amazon.com/apigateway/api-reference/resource/account/). As you traverse the many fine REST API's out there to find inspiration, you will see that there is no de facto standard for which naming convention to use.
 
-However - I must emphasize that **camelCase does ofter some benefits** for API's that are meant to be used directly in a browser application (or other Javascript clients), because it is the same casing that is [standard in Javascript](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/JavaScript#variable_naming). That means if the REST API uses camelCase in its JSON, then when that JSON is parsed by Javascript the object fields will have the casing that fits.
+However - I must emphasize that **camelCase does offer some benefits** for API's that are meant to be used directly in a browser application (or other Javascript clients), because it is the same casing that is [standard in Javascript](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/JavaScript#variable_naming). That means if the REST API uses camelCase in its JSON, then when that JSON is parsed by Javascript the object fields will have the casing that fits.
 
 **Example:**
 
