@@ -95,7 +95,7 @@ var myshop = new MyshopClient();
 myshop.animals.findAll(); // Request to https://myshop.com/animals
 ```
 
-Notice that the naming naturally reflects the naming of the resources on the server. Recognizable patterns like this makes it easy for developers to figure out navigate the API.
+Notice that the naming naturally reflects the naming of the resources on the server. Recognizable patterns like this makes it easy for developers to figure out how to navigate the API.
 
 
 ## Recognizability
