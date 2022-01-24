@@ -18,8 +18,12 @@ class Hero extends React.Component {
     { text: 'design well-structured REST APIs', tags: ['#designthinking', '#simplicity', '#softwarearchitecture'] },
     { text: 'write clean and testable code', tags: ['#simplicity', '#softwarearchitecture'] },
     { text: 'empathize with the end-users', tags: ['#designthinking'] },
-    { text: 'prioritize mental health', tags: ['#mentalhealth', '#simplicity'] },
-    { text: 'design rock solid user interfaces', tags: ['#designthinking', '#softwarearchitecture'] }
+    { text: 'improve my ability to focus', tags: ['#mentalhealth', '#simplicity'] },
+    { text: 'design rock solid user interfaces', tags: ['#designthinking', '#softwarearchitecture'] },
+    { text: 'prioritize quality in code', tags: ['#simplicity', '#softwarearchitecture'] },
+    { text: 'learn new technologies fast', tags: ['#softwarearchitecture'] },
+    { text: 'rest well to maximize my performance', tags: ['#mentalhealth'] },
+    { text: 'appreciate good relations', tags: ['#mentalhealth'] }
   ];
   sentenceIndex = 0;
   sentenceTimer?: any;

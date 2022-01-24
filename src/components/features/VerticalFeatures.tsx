@@ -47,10 +47,10 @@ class VerticalFeatures extends React.Component {
       imageAlt="Only develop what is actually needed."
     />
     <VerticalFeatureRow
-      title="Mental Health"
+      title="Focus Training"
       description={
         <>
-          <div>Being mindful of your focus in order to control your thoughts can free you from stress and anxiety. You can train your focus and gain a better well-being.</div>
+          <div>Being mindful of your focus in order to control your thoughts can free us from stress and anxiety. We can all train our focus and gain a better well-being.</div>
           <Link href="/blog"><sl-button size="small" class="mt-2" type="primary">Tell me more</sl-button></Link>
         </>
       }
