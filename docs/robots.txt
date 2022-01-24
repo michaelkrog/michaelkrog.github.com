@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://michaelkrog.dev
+
+# Sitemaps
+Sitemap: https://michaelkrog.dev/sitemap.xml
+Sitemap: https://michaelkrog.dev/sitemap-0.xml
