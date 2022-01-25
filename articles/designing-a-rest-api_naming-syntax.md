@@ -14,7 +14,7 @@ This article is the first in a series of some great takeaways on how to craft a 
 you read through the articles you will learn how to form an API in a way that is easy to expand, document and use.
 
 The articles will not cover implementation details(eg. no code samples) but any suggestions given here will be possible 
-to implement in any proper framework like Spring Boot, .Net Core MVC, Expressjs and others.
+to implement in any proper framework like Spring Boot, .Net Core MVC, NestJS and others.
 
 Also, these series will only cover JSON as the envelope for data. REST API's can however use any data format they like, but it is outside of the scope for this series. The things you can expect to get from these articles are related to REST API's with JSON as the data format and will cover these subjects:
 
