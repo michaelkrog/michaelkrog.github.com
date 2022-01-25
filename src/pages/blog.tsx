@@ -12,7 +12,7 @@ interface IProps {
 
 const Blog: FunctionComponent<IProps> = ({ articles }) => {
     return (
-        <Base hero="">
+        <Base hero="" title="#designthinking, #simplicity, #softwarearchitecture and #mentalhealth" description="This is a blog that gives you advice and insight into #designthinking, #simplicity, #softwarearchitecture and how to maintain focus and #mentalhealth with in a stressfull world.">
         <div className={styles.container}>
         {
             articles.map((article, i) => (

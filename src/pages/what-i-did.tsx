@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { Section } from '../components/layout/Section';
 import { Base } from '../templates/Base';
 import Tabs from '../components/Tabs';
+import Head from 'next/head';
 
 const activity = [
 
@@ -124,16 +125,30 @@ class WhatIDid extends React.Component {
   modal?: HTMLElement;
 
   showImage(link: string) {
-    while(this.modal!.hasChildNodes()) this.modal!.firstChild?.remove();
+    while (this.modal!.hasChildNodes()) this.modal!.firstChild?.remove();
     var image = document.createElement('img');
     image.src = link;
     this.modal?.appendChild(image);
     this.modal?.setAttribute('open', 'true');
   }
 
+  title = 'What I did';
+  description = 'My resume of earlier software related experiences';
+
   render() {
+    const url = `https://michaelkrog.dev/what-i-did`;
+    const imageUrl = 'https://michaelkrog.dev/assets/images/michael/image1.jpg';
     return (
-      <Base>
+      <Base title={this.title} description={this.description}>
+        <Head>
+          <meta property="og:type" content="website"></meta>
+          <meta property="og:title" content={this.title}></meta>
+          <meta property="og:url" content={url}></meta>
+          <meta property="og:description" content={this.description}></meta>
+
+          <meta property="og:image" content={imageUrl} />
+        </Head>
+
         <sl-dialog ref={(el: HTMLElement) => this.modal = el}></sl-dialog>
         <Section>
           <Tabs index={2}></Tabs>
@@ -204,67 +219,67 @@ class WhatIDid extends React.Component {
                               </div>
                             </div>
                           </div>
-                    <div className="min-w-0 flex-1 py-1.5">
-                      <div className="text-sm text-gray-500">
-                        {activityItem.description}
-                        {activityItem.screenshot ? <sl-tooltip content="View screenshot"><a target="_blank" className="ml-1 text-blue-500 align-middle text-base" onClick={_ => this.showImage(activityItem.screenshot)}><sl-icon name="image"></sl-icon></a></sl-tooltip> : null}
-                        {activityItem.link != null ? <sl-tooltip content="Go to product"><a target="_blank" className="ml-1 text-blue-500 align-middle text-base" href={activityItem.link}><sl-icon name="link-45deg"></sl-icon></a></sl-tooltip> : null }
-                      </div>
-                      {activityItem.tags?.map((t, index) => <sl-badge key={index} type="info" style={{'marginRight':'0.2rem'}}>{t}</sl-badge>)}
-                      
+                          <div className="min-w-0 flex-1 py-1.5">
+                            <div className="text-sm text-gray-500">
+                              {activityItem.description}
+                              {activityItem.screenshot ? <sl-tooltip content="View screenshot"><a target="_blank" className="ml-1 text-blue-500 align-middle text-base" onClick={_ => this.showImage(activityItem.screenshot)}><sl-icon name="image"></sl-icon></a></sl-tooltip> : null}
+                              {activityItem.link != null ? <sl-tooltip content="Go to product"><a target="_blank" className="ml-1 text-blue-500 align-middle text-base" href={activityItem.link}><sl-icon name="link-45deg"></sl-icon></a></sl-tooltip> : null}
+                            </div>
+                            {activityItem.tags?.map((t, index) => <sl-badge key={index} type="info" style={{ 'marginRight': '0.2rem' }}>{t}</sl-badge>)}
+
+                          </div>
+                        </>
+                      ) : activityItem.type === 'tags' ? (
+                        <>
+                          <div>
+                            <div className="relative px-1">
+                              <div className="h-8 w-8 bg-gray-100 rounded-full ring-8 ring-white flex items-center justify-center">
+                                <sl-icon name="tag" className="h-5 w-5 text-gray-500" aria-hidden="true" />
+                              </div>
+                            </div>
+                          </div>
+                          <div className="min-w-0 flex-1 py-0">
+                            <div className="text-sm leading-8 text-gray-500">
+                              <span className="mr-0.5">
+                                <a href="activityItem.person!.href" className="font-medium text-gray-900">
+                                  activityItem.person!.name
+                                </a>{' '}
+                                added tags
+                              </span>{' '}
+                              <span className="mr-0.5">
+                                {activityItem.tags!.map((_) => (
+                                  <Fragment key="tag.name">
+                                    <a
+                                      href="tag.href"
+                                      className="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5 text-sm"
+                                    >
+                                      <span className="absolute flex-shrink-0 flex items-center justify-center">
+                                        <span
+                                          className={classNames('tag.color', 'h-1.5 w-1.5 rounded-full')}
+                                          aria-hidden="true"
+                                        />
+                                      </span>
+                                      <span className="ml-3.5 font-medium text-gray-900">tag.name</span>
+                                    </a>{' '}
+                                  </Fragment>
+                                ))}
+                              </span>
+                              <span className="whitespace-nowrap">{activityItem.date}</span>
+                            </div>
+                          </div>
+                        </>
+                      ) : null}
                     </div>
-                  </>
-                ) : activityItem.type === 'tags' ? (
-                  <>
-                    <div>
-                      <div className="relative px-1">
-                        <div className="h-8 w-8 bg-gray-100 rounded-full ring-8 ring-white flex items-center justify-center">
-                          <sl-icon name="tag" className="h-5 w-5 text-gray-500" aria-hidden="true" />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="min-w-0 flex-1 py-0">
-                      <div className="text-sm leading-8 text-gray-500">
-                        <span className="mr-0.5">
-                          <a href="activityItem.person!.href" className="font-medium text-gray-900">
-                            activityItem.person!.name
-                          </a>{' '}
-                          added tags
-                        </span>{' '}
-                        <span className="mr-0.5">
-                          {activityItem.tags!.map((_) => (
-                            <Fragment key="tag.name">
-                              <a
-                                href="tag.href"
-                                className="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5 text-sm"
-                              >
-                                <span className="absolute flex-shrink-0 flex items-center justify-center">
-                                  <span
-                                    className={classNames('tag.color', 'h-1.5 w-1.5 rounded-full')}
-                                    aria-hidden="true"
-                                  />
-                                </span>
-                                <span className="ml-3.5 font-medium text-gray-900">tag.name</span>
-                              </a>{' '}
-                            </Fragment>
-                          ))}
-                        </span>
-                        <span className="whitespace-nowrap">{activityItem.date}</span>
-                      </div>
-                    </div>
-                  </>
-                ) : null}
-              </div>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
 
 
-                </Section >
-            </Base >
-        );
+        </Section >
+      </Base >
+    );
   }
 }
 
