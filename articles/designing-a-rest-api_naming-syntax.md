@@ -19,7 +19,7 @@ to implement in any proper framework like Spring Boot, .Net Core MVC, NestJS, an
 Also, these series will only cover JSON as the envelope for data. REST APIs can however use any data format they like, but it is outside of the scope for this series. The things you can expect to get from these articles are related to REST APIs with JSON as the data format and will cover these subjects:
 
 1. Naming conventions (This article)
-2. Recognizable design patterns (Future article)
+2. [Recognizable design patterns](../designing-a-rest-api_recognizable-design-patterns)
 3. Idempotency (Future article)
 4. Paging and sorting (Future article)
 5. Searching (Future article)
