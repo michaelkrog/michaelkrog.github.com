@@ -16,9 +16,9 @@ const Tabs = (props: ITabsProps) => (
                 <span className={props.index === 0 ? activeClasses : inactiveClasses}>Who I am</span>
             </Link>
 
-            <Link href="/what-i-do">
+            {/*<Link href="/what-i-do">
                 <span className={props.index === 1 ? activeClasses : inactiveClasses}>What I do</span>
-            </Link>
+</Link>*/}
 
             <Link href="/what-i-did">
                 <span className={props.index === 2 ? activeClasses : inactiveClasses}>What I did</span>

@@ -11,7 +11,7 @@ const activity = [
     type: 'hire',
     title: 'Software Developer',
     imageUrl:
-      'https://www.audio.dk/wp-content/uploads/2017/02/audio-logo-512.png',
+      '/assets/images/logos/audiomedia.jpeg',
     company: { name: 'Audio Media', href: 'http://audio.dk' },
     date: 'January 2000',
     comment: ''
@@ -33,7 +33,7 @@ const activity = [
     type: 'hire',
     title: 'Senior Software Developer',
     imageUrl:
-      'https://usercontent.one/wp/www.conscius.com/wp-content/uploads/2018/08/favicon_114x114px.png',
+      '/assets/images/logos/conscius.png',
     company: { name: 'Conscius', href: 'http://conscius.com' },
     date: 'May 2005',
   },
@@ -77,13 +77,29 @@ const activity = [
     tags: ['Java', 'Spring', 'Sql', 'RabbitMQ']
   },
   {
+    id: '3_4',
+    type: 'founding',
+    title: 'Software Architect',
+    imageUrl:
+      '/assets/images/logos/apaq.png',
+    company: { name: 'Apaq', href: 'http://apaq.dk' },
+    date: 'January 2015',
+  },
+  {
+    id: '3_5',
+    type: 'assignment',
+    description: 'Built new Sass product Previsto for optimizing planning in the service industry.',
+    screenshot: '/assets/images/screenshots/previsto.png',
+    tags: ['Java', 'Spring', 'MongoDB', 'RabbitMQ', 'Optaplanner', 'Docker']
+  },
+  {
     id: '4_1',
     type: 'hire',
     title: 'Senior Software Developer',
     imageUrl:
       'data:image/png;base64,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',
     company: { name: 'EG A/S', href: 'http://eg.dk' },
-    date: 'February 2015',
+    date: 'February 2016',
   },
   {
     id: '4_2',
@@ -113,6 +129,34 @@ const activity = [
     type: 'assignment',
     description: 'Architected lazy loaded Angular-based Webcomponents for gradually transforming deprecated accounting UI into a modern code base.',
     tags: ['CSS', 'Webcomponents', 'Angular', 'StencilJs', 'Typescript']
+  },
+  {
+    id: '5_1',
+    type: 'hire',
+    title: 'Software Architect',
+    imageUrl:
+      '/assets/images/logos/apaq.png',
+    company: { name: 'Apaq', href: 'http://apaq.dk' },
+    date: 'January 2023',
+  },
+  {
+    id: '5_2',
+    type: 'assignment',
+    description: 'Further developed Previsto.',
+    screenshot: '/assets/images/screenshots/previsto.png',
+    tags: ['Java', 'Spring', 'MongoDB', 'RabbitMQ', 'Optaplanner', 'Docker', 'Angular', 'StencilJs']
+  },
+  {
+    id: '5_3',
+    type: 'assignment',
+    description: 'Created integrations to diverse accounting systems',
+    tags: ['Java']
+  },
+  {
+    id: '5_4',
+    type: 'assignment',
+    description: 'Built new landingpage and documentation website for Previsto.',
+    tags: ['React']
   }
 ]
 
@@ -206,6 +250,28 @@ class WhatIDid extends React.Component {
                               <p className="mt-0.5 text-sm text-gray-500">Hired {activityItem.date} at <a href={activityItem.company!.href} className="text-blue-900">
                                 {activityItem.company!.name}
                               </a>
+                              </p>
+                            </div>
+                          </div>
+                        </>
+                      ) : activityItem.type === 'founding' ? (
+                        <>
+                          <div className="relative">
+                            <img
+                              className="h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white"
+                              src={activityItem.imageUrl}
+                              alt=""
+                            />
+
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <div>
+                              <div className="text-sm text-gray-900 font-semibold">
+                                {activityItem.title}
+                              </div>
+                              <p className="mt-0.5 text-sm text-gray-500">Founded <a href={activityItem.company!.href} className="text-blue-900">
+                                {activityItem.company!.name}
+                              </a> in {activityItem.date} 
                               </p>
                             </div>
                           </div>
