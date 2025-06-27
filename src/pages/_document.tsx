@@ -8,8 +8,8 @@ class MyDocument extends Document {
     return (
       <Html lang={AppConfig.locale}>
         <Head>
-          <script type="module" src="https://cdn.jsdelivr.net/npm/@apaq/stallion@1.0.0-alpha.27/dist/stallion/stallion.esm.js"></script>
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@apaq/stallion@1.0.0-alpha.27/dist/stallion/stallion.css"></link>
+          <script type="module" src="https://cdn.jsdelivr.net/npm/@apaq/stallion@1.0.0-alpha.34/dist/stallion/stallion.esm.js"></script>
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@apaq/stallion@1.0.0-alpha.34/dist/stallion/stallion.css"></link>
           <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
         </Head>
 
